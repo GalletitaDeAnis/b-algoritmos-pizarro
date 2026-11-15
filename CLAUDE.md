@@ -10,3 +10,6 @@ Repo de tareas del curso **Análisis de Algoritmos** (Ing. Josué Chura). Alumno
 - Los datos de `h1/` (cifras y CSV) son de ejemplo/anonimizados, no reales.
 - Cada tarea nueva: su carpeta (`hN/` o `practicas/cN/`) con `README.md`, y actualizar la tabla de estado del `README.md` raíz y `docs/CLASES.md`.
 - El material del docente (zips) está fuera del repo, en `C:\Programacion\UAB\Logaritmos\`.
+- Lenguaje de las prácticas: C++ con `g++ -O2 -std=c++17` (MSYS2 en `C:\msys64\mingw64\bin`). **Compilar desde PowerShell** con ese directorio al inicio del PATH: en Git Bash el `g++` falla sin mostrar errores.
+- Los tiempos se escriben con punto decimal y sin separador de miles (4090.42 ms) para no confundir.
+- Estado del caso: semana 2 eligió MergeSort + búsqueda binaria (O(n log n)) para la conciliación.
