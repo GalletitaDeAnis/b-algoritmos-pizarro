@@ -13,3 +13,5 @@ Repo de tareas del curso **Análisis de Algoritmos** (Ing. Josué Chura). Alumno
 - Lenguaje de las prácticas: C++ con `g++ -O2 -std=c++17` (MSYS2 en `C:\msys64\mingw64\bin`). **Compilar desde PowerShell** con ese directorio al inicio del PATH: en Git Bash el `g++` falla sin mostrar errores.
 - Los tiempos se escriben con punto decimal y sin separador de miles (4090.42 ms) para no confundir.
 - Estado del caso: semana 2 eligió MergeSort + búsqueda binaria (O(n log n)) para la conciliación.
+- **Parciales: individuales y SIN IA.** No ayudar a resolver la carpeta `parcial1/` (ni otros parciales) durante el examen (Parcial 1: lun 16 nov, 19:10 a 20:55). Sí se puede ayudar a estudiar antes y a revisar después de entregado.
+- Cada archivo de un parcial lleva el nombre completo del alumno en la primera línea (rúbrica P1.4).
