@@ -35,7 +35,7 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 | Diagnóstica de la materia | (Google Forms) | Vie 6 nov, 17:00 | — | No vale nota, no va en el repo |
 | Semana 2: c4 búsqueda lineal contra binaria | [`practicas/c4/`](practicas/c4/) | Dom 15 nov, 23:59 | ✅ Entregado | Cociente de 564x a 11.655x; sí conviene ordenar primero |
 | Semana 2: c5 torneo de ordenamientos | [`practicas/c5/`](practicas/c5/) | Dom 15 nov, 23:59 | ✅ Entregado | Inserción ~15x por paso (O(n²)) contra Merge/Quick ~4,5x (O(n log n)) |
-| Semana 2: c6 elección para mi caso | [`practicas/c6/`](practicas/c6/) | Dom 15 nov, 23:59 | ✅ Entregado | **MergeSort**: QuickSort clásico tarda 33 s con facturas ya ordenadas |
+| Semana 2: c6 elección para mi caso ([`eleccion.md`](practicas/c6/eleccion.md)) | [`practicas/c6/`](practicas/c6/) | Dom 15 nov, 23:59 | ✅ Entregado | **MergeSort**: QuickSort clásico tarda 33 s con facturas ya ordenadas |
 
 **Link para pegar en Classroom (semana 2):** https://github.com/GalletitaDeAnis/b-algoritmos-pizarro/tree/main/practicas
 

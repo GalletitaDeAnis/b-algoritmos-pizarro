@@ -4,6 +4,8 @@
 
 **Mi caso ([`h1/`](../../h1/)):** conciliación del Registro de Compras (RCV) del SIN contra las facturas del sistema contable. Son de 5.000 facturas al mes a ~80.000 en un año, y la clave es (NIT, nro_factura).
 
+**Documento de elección (plantilla de la clase 6): [`eleccion.md`](eleccion.md).**
+
 **Evidencia:** `eleccion.cpp` mide los algoritmos de c5 sobre **facturas con el formato real del RCV**, en los tres escenarios en que me llegan los datos. Tablas en [`mediciones.md`](mediciones.md).
 
 ## Elección: **MergeSort**
