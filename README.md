@@ -15,6 +15,8 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 ├── docs/
 │   ├── REGLAS.md        <- reglas del curso, protocolo de medición, O grande
 │   └── CLASES.md        <- resumen de cada clase y qué se pidió
+├── hitos/h2/            <- caso integrador, H2: la estructura de mi caso (tabla hash)
+├── parcial1/            <- Parcial 1, variante B
 ├── h1/                  <- caso integrador, semana 1: mi proceso lento
 │   ├── README.md
 │   └── muestra_registro_compras.csv
@@ -36,6 +38,8 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 | Semana 2: c4 búsqueda lineal contra binaria | [`practicas/c4/`](practicas/c4/) | Dom 15 nov, 23:59 | ✅ Entregado | Cociente de 564x a 11.655x; sí conviene ordenar primero |
 | Semana 2: c5 torneo de ordenamientos | [`practicas/c5/`](practicas/c5/) | Dom 15 nov, 23:59 | ✅ Entregado | Inserción ~15x por paso (O(n²)) contra Merge/Quick ~4,5x (O(n log n)) |
 | Semana 2: c6 elección para mi caso ([`eleccion.md`](practicas/c6/eleccion.md)) | [`practicas/c6/`](practicas/c6/) | Dom 15 nov, 23:59 | ✅ Entregado | **MergeSort**: QuickSort clásico tarda 33 s con facturas ya ordenadas |
+| Parcial 1 (variante B) | [`parcial1/`](parcial1/) | Lun 16 nov, 20:40 | ✅ Entregado | Análisis, cura O(n log n), medición y elección |
+| H2 La estructura de tu caso | [`hitos/h2/`](hitos/h2/) | Dom 22 nov, 23:59 | ⏳ Por subir | **Tabla hash** por (NIT, nro): con 80.000 facturas, 11.9 s → 21 ms (x571) |
 
 **Link para pegar en Classroom (semana 2):** https://github.com/GalletitaDeAnis/b-algoritmos-pizarro/tree/main/practicas
 
@@ -45,7 +49,7 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 Hoy compara cada factura contra todas las demás (**O(n²)**). La meta es bajar ese tiempo con mejores algoritmos
 (búsqueda binaria, ordenamiento, hash...) y demostrarlo **con una tabla de mediciones**.
 
-**Avance:** semana 2, ordenar con MergeSort y buscar con binaria lleva el proceso a O(n log n). Con un año de facturas pasa de 2,95 s a 0,05 s (~57x) en la simulación ([`practicas/c6/`](practicas/c6/)).
+**Avance:** H2 (unidad 3), una **tabla hash** con clave (NIT, nro) deja la conciliación en O(n): con 80.000 facturas pasa de 11.9 s a 21 ms ([`hitos/h2/`](hitos/h2/)). Antes, en la semana 2, ordenar con MergeSort y buscar con binaria lleva el proceso a O(n log n). Con un año de facturas pasa de 2,95 s a 0,05 s (~57x) en la simulación ([`practicas/c6/`](practicas/c6/)).
 Detalle en [`h1/README.md`](h1/README.md).
 
 ## Cómo entregar cada tarea (checklist)
