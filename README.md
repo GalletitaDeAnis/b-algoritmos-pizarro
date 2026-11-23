@@ -15,6 +15,8 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 ├── docs/
 │   ├── REGLAS.md        <- reglas del curso, protocolo de medición, O grande
 │   └── CLASES.md        <- resumen de cada clase y qué se pidió
+├── hitos/h3/            <- caso integrador, H3: voraz o dinámica (qué facturas cubre un pago)
+├── parcial2/            <- Parcial 2, variante A
 ├── hitos/h2/            <- caso integrador, H2: la estructura de mi caso (tabla hash)
 ├── parcial1/            <- Parcial 1, variante B
 ├── h1/                  <- caso integrador, semana 1: mi proceso lento
@@ -39,7 +41,9 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 | Semana 2: c5 torneo de ordenamientos | [`practicas/c5/`](practicas/c5/) | Dom 15 nov, 23:59 | ✅ Entregado | Inserción ~15x por paso (O(n²)) contra Merge/Quick ~4,5x (O(n log n)) |
 | Semana 2: c6 elección para mi caso ([`eleccion.md`](practicas/c6/eleccion.md)) | [`practicas/c6/`](practicas/c6/) | Dom 15 nov, 23:59 | ✅ Entregado | **MergeSort**: QuickSort clásico tarda 33 s con facturas ya ordenadas |
 | Parcial 1 (variante B) | [`parcial1/`](parcial1/) | Lun 16 nov, 20:40 | ✅ Entregado | Análisis, cura O(n log n), medición y elección |
-| H2 La estructura de tu caso | [`hitos/h2/`](hitos/h2/) | Dom 22 nov, 23:59 | ⏳ Por subir | **Tabla hash** por (NIT, nro): con 80.000 facturas, 11.9 s → 21 ms (x571) |
+| Parcial 2 (variante A) | [`parcial2/`](parcial2/) | Dom 22 nov, 10:40 | ✅ Entregado | Turnos de clínica: heap + hash, x172 con 40.000 |
+| H2 La estructura de tu caso | [`hitos/h2/`](hitos/h2/) | Dom 22 nov, 23:59 | ✅ Entregado | **Tabla hash** por (NIT, nro): con 80.000 facturas, 11.9 s → 21 ms (x571) |
+| H3 Voraz o dinámica | [`hitos/h3/`](hitos/h3/) | Mié 25 nov, 22:00 (solo commit) | ⏳ Por subir | **Dinámica**: el voraz cubre exacto 7 de 1000 pagos |
 
 **Link para pegar en Classroom (semana 2):** https://github.com/GalletitaDeAnis/b-algoritmos-pizarro/tree/main/practicas
 
