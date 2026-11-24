@@ -30,7 +30,7 @@ Pago de **1.000,00 Bs**; facturas pendientes: 600, 500, 500 y 300.
 El voraz falla porque **elegir la más grande ahora le cierra el camino** a la combinación correcta. En la simulación con 1.000 pagos de 15 facturas cada uno (siempre existe una combinación exacta), el voraz acertó **solo 7 de 1.000**. Ver [`medicion.md`](medicion.md).
 
 ### ¿Hay subproblemas que se repiten? **Sí → dinámica**
-La fuerza bruta se pregunta muchas veces lo mismo: "con las facturas 1 a i, ¿puedo sumar exactamente s?". Por ejemplo, 600 + 300 + (las demás) y 500 + 400 + (las demás) llegan al **mismo subproblema** (900 Bs ya cubiertos, quedan las mismas facturas) por caminos distintos, y lo resuelve dos veces.
+La fuerza bruta se pregunta muchas veces lo mismo: "con las facturas 1 a i, ¿puedo sumar exactamente s?". Por ejemplo, con las facturas 600, 500, 500 y 300: "tomo el primer 500 y no el segundo" y "tomo el segundo 500 y no el primero" llegan al **mismo subproblema** (500 Bs ya cubiertos, falta decidir el 300) por caminos distintos, y la fuerza bruta lo resuelve dos veces. La dinámica lo anota una sola vez. Visto como grafo, es un camino en un DAG de estados (ver [`grafo.md`](grafo.md)).
 
 **Recurrencia:**
 ```

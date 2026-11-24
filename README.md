@@ -15,7 +15,7 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 ├── docs/
 │   ├── REGLAS.md        <- reglas del curso, protocolo de medición, O grande
 │   └── CLASES.md        <- resumen de cada clase y qué se pidió
-├── hitos/h3/            <- caso integrador, H3: voraz o dinámica (qué facturas cubre un pago)
+├── hitos/h3/            <- caso integrador, H3: voraz o dinámica (qué facturas cubre un pago) + mi caso como grafo
 ├── parcial2/            <- Parcial 2, variante A
 ├── hitos/h2/            <- caso integrador, H2: la estructura de mi caso (tabla hash)
 ├── parcial1/            <- Parcial 1, variante B
@@ -43,7 +43,7 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 | Parcial 1 (variante B) | [`parcial1/`](parcial1/) | Lun 16 nov, 20:40 | ✅ Entregado | Análisis, cura O(n log n), medición y elección |
 | Parcial 2 (variante A) | [`parcial2/`](parcial2/) | Dom 22 nov, 10:40 | ✅ Entregado | Turnos de clínica: heap + hash, x172 con 40.000 |
 | H2 La estructura de tu caso | [`hitos/h2/`](hitos/h2/) | Dom 22 nov, 23:59 | ✅ Entregado | **Tabla hash** por (NIT, nro): con 80.000 facturas, 11.9 s → 21 ms (x571) |
-| H3 Voraz o dinámica | [`hitos/h3/`](hitos/h3/) | Mié 25 nov, 22:00 (solo commit) | ⏳ Por subir | **Dinámica**: el voraz cubre exacto 7 de 1000 pagos |
+| H3 Voraz o dinámica | [`hitos/h3/`](hitos/h3/) | Mié 25 nov, 22:00 (solo commit) | ✅ Subido (22 nov) | **Dinámica**: el voraz cubre exacto 7 de 1000 pagos. Mi caso como grafo: [`grafo.md`](hitos/h3/grafo.md) |
 
 **Link para pegar en Classroom (semana 2):** https://github.com/GalletitaDeAnis/b-algoritmos-pizarro/tree/main/practicas
 
@@ -52,6 +52,19 @@ Aquí va todo lo que se entrega: el caso integrador (H1, H2, ...) y las práctic
 **Proceso:** conciliación mensual del Registro de Compras (RCV) del SIN contra las facturas del sistema contable de Wistupiku.
 Hoy compara cada factura contra todas las demás (**O(n²)**). La meta es bajar ese tiempo con mejores algoritmos
 (búsqueda binaria, ordenamiento, hash...) y demostrarlo **con una tabla de mediciones**.
+
+### Mi proceso, paso a paso
+1. **H1 · el problema** ([`h1/`](h1/)): el cruce RCV del SIN contra el sistema compara todas con todas, **O(n²)**.
+2. **Medir** ([`practicas/c3/`](practicas/c3/)): primera tabla de mediciones; aprendí a leer el ratio (x4 en tiempo cuando los datos crecen x4 → O(n)).
+3. **Buscar y ordenar** ([`practicas/c4/`](practicas/c4/), [`c5/`](practicas/c5/), [`c6/`](practicas/c6/)): la binaria gana miles de veces a la lineal, y ordenar se paga solo. Para mi caso elegí **MergeSort + binaria, O(n log n)**: con 80.000 facturas, ~57x más rápido.
+4. **H2 · estructura** ([`hitos/h2/`](hitos/h2/)): una **tabla hash** por (NIT, nro) deja la conciliación en **O(n)**: x571 más rápido con 80.000 facturas.
+5. **H3 · decidir** ([`hitos/h3/`](hitos/h3/)): la otra parte del proceso, qué facturas cubre un pago, se resuelve con **programación dinámica** (O(n · S)). El voraz se equivoca en 993 de 1000 pagos y la fuerza bruta es O(2ⁿ).
+6. **Grafo** ([`hitos/h3/grafo.md`](hitos/h3/grafo.md)): mi caso como grafo bipartito, donde los **nodos son las facturas** del SIN y del sistema y una **arista** une las que tienen la misma clave (NIT, nro). Las faltantes y las sobrantes son nodos sin aristas.
+
+**Notas de revisión de las mediciones** (no modifico entregas cerradas, así que lo aclaro aquí):
+- **c3:** el protocolo fue 1 calentamiento + 5 repeticiones + promedio. Los ratios 3,98x y 3,95x se alejan de 4x por ruido de procesos de fondo (<2%).
+- **c5:** la fila 64n se dispara (Inserción x28, Merge x8) porque 320.000 enteros ya no caben en la caché, y después los ratios vuelven a ~4,3x. Conclusión: Inserción O(n²) (~15x por paso) contra Merge/Quick O(n log n) (~4,5x).
+- **c6:** los tiempos de menos de 1 ms con 5.000 facturas son ruido de reloj. La conclusión está en [`eleccion.md`](practicas/c6/eleccion.md).
 
 **Avance:** H2 (unidad 3), una **tabla hash** con clave (NIT, nro) deja la conciliación en O(n): con 80.000 facturas pasa de 11.9 s a 21 ms ([`hitos/h2/`](hitos/h2/)). Antes, en la semana 2, ordenar con MergeSort y buscar con binaria lleva el proceso a O(n log n). Con un año de facturas pasa de 2,95 s a 0,05 s (~57x) en la simulación ([`practicas/c6/`](practicas/c6/)).
 Detalle en [`h1/README.md`](h1/README.md).
